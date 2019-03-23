@@ -10,20 +10,20 @@ spec:
         app: helloworld
     spec:
       containers:
-      - name: k8s-demo
-        image: wardviaene/k8s-demo
-        ports:
-        - name: nodejs-port
-          containerPort: 3000
-        livenessProbe:
-          httpGet:
-            path: /
-            port: nodejs-port
-          initialDelaySeconds: 15
-          timeoutSeconds: 30
-        readinessProbe:
-          httpGet:
-            path: /
-            port: nodejs-port
-          initialDelaySeconds: 15
-          timeoutSeconds: 30
+        - name: docker-nodejs-demo
+          image: peelmicro/docker-nodejs-demo
+          ports:
+            - name: nodejs-port
+              containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: nodejs-port
+            initialDelaySeconds: 15
+            timeoutSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: nodejs-port
+            initialDelaySeconds: 15
+            timeoutSeconds: 30
