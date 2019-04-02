@@ -16,9 +16,9 @@ pipeline {
         container('helm') {
           git url: 'git://github.com/wardviaene/kubernetes-course.git', branch: 'master'
           sh '''
-          HELM_BUCKET=helm-rytcufor
+          HELM_BUCKET=helm-kubernetescourse-peelmicro
           PACKAGE=demo-chart
-          export AWS_REGION=eu-west-1
+          export AWS_REGION=eu-central-1
          
           cp -r /home/helm/.helm ~
           helm repo add my-charts s3://${HELM_BUCKET}/charts

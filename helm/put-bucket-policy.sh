@@ -1,9 +1,9 @@
 #!/bin/bash
-DEFAULT_REGION="eu-west-1"
+DEFAULT_REGION="eu-central-1"
 AWS_REGION="${AWS_REGION:-${DEFAULT_REGION}}"
 
-BUCKET="helm-rytcufor"
-NODE_ROLE_ARN="arn:aws:iam::*"
+BUCKET="helm-kubernetescourse-peelmicro"
+NODE_ROLE_ARN="arn:aws:iam::972569889348:role/nodes.kubernetes.peelmicro.com"
 
 export AWS_REGION
 
