@@ -1,0 +1,19 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: myapp
+  namespace: default
+spec:
+  secretName: myapp-tls-staging
+  issuerRef:
+    name: myapp-letsencrypt-staging
+  commonName: myapp.peelmicro.com
+  # dnsNames:
+  # - www.myapp.peelmicro.com
+  acme:
+    config:
+    - http01:
+      ingress: myapp
+    domains:
+    - myapp.peelmicro.com
+    # - www.myapp.peelmicro.com

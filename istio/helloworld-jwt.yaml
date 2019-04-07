@@ -19,7 +19,7 @@ metadata:
   name: helloworld-auth
 spec:
   hosts:
-  - "auth.kubernetes.newtech.academy"
+  - "auth.kubernetes.peelmicro.com"
   gateways:
   - helloworld-gateway
   http:
@@ -35,7 +35,7 @@ metadata:
   name: helloworld-hello
 spec:
   hosts:
-  - "hello.kubernetes.newtech.academy"
+  - "hello.kubernetes.peelmicro.com"
   gateways:
   - helloworld-gateway
   http:
@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: wardviaene/http-echo
+        image: peelmicro/http-echo
         env:
         - name: TEXT
           value: this is the authentication service
@@ -95,7 +95,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: wardviaene/http-echo
+        image: peelmicro/http-echo
         env:
         - name: TEXT
           value: Hello, you can only reach this service when authenticated

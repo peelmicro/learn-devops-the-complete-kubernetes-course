@@ -9,7 +9,7 @@ spec:
   - mtls: {}
   origins:
   - jwt:
-      issuer: "http-echo@http-echo.kubernetes.newtech.academy"
-      jwksUri: "http://auth.kubernetes.newtech.academy/.well-known/jwks.json"
+      issuer: "http-echo@http-echo.kubernetes.peelmicro.com"
+      jwksUri: "http://auth.kubernetes.peelmicro.com/.well-known/jwks.json"
   principalBinding: USE_ORIGIN
 ---
